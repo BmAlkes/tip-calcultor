@@ -2,24 +2,24 @@
 
 <p><a href="">Link project</a></p>
 
-<img src="https://github.com/BmAlkes/guitarLa/blob/main/src/assets/guitta.png?raw=true"/>
+<img src="https://github.com/BmAlkes/tip-calcultor/blob/main/src/assets/Screenshot_34.png?raw=true"/>
 
 <hr/>
 
 <h2>📝 Description</h2>
-<p>Website for selling guitars with cart with states</p>
+<p>Web tip calculator..</p>
 
 <hr/>
 
 <h2>📚Functionalities</h2>
-<p>Show guitars with a state cart</p>
+<p>Tip Calculator</p>
 
   <hr/>
 <h3>🔧
 Technologies used
 Technology</h3>
 
-<p>React, react reducer </p>
+<p>React </p>
 
 <hr/>
 <h2>🚀 Run Projext</h2>
