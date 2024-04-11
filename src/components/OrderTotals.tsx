@@ -1,20 +1,20 @@
-import { useMemo } from "react";
+import { Dispatch, useMemo } from "react";
 import { OrderItem } from "../types";
 import { formatCurrency } from "../helpers";
+import { OrderActions } from "../reducers/order-reducer";
 
 type OrderTotalsProps = {
   order: OrderItem[];
   tip: number;
-  resetOrder: () => void;
+  dispatch: Dispatch<OrderActions>;
 };
 
-const OrderTotals = ({ order, tip, resetOrder }: OrderTotalsProps) => {
+const OrderTotals = ({ order, tip, dispatch }: OrderTotalsProps) => {
   const subTotalAmount = useMemo(
     () => order.reduce((total, item) => total + item.quantity * item.price, 0),
     [order]
   );
   const tipAmount = useMemo(() => subTotalAmount * tip, [tip, order]);
-  console.log(subTotalAmount);
 
   const totalPayment = useMemo(() => tipAmount + subTotalAmount, [tip, order]);
   return (
@@ -35,7 +35,7 @@ const OrderTotals = ({ order, tip, resetOrder }: OrderTotalsProps) => {
       </div>
       <button
         className="bg-sky-200 p-2 text-slate-700 rounded-md"
-        onClick={() => resetOrder()}
+        onClick={() => dispatch({ type: "place-order", payload: "" })}
       >
         Empty consuption
       </button>
